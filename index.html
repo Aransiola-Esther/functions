@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+
+
+    <h1>Function Task</h1>
+    <h4>Task 1</h4>
+    <p> Given an array containing 7 numbers, {7,13,15,21,30,4,95}, write a function that takes as argument an array
+        containing this 7 numbers, and returns the even number in the array doubled as an updated array</p>
+    <h6>Test case</h6>
+    <p>{7,13,15,21,30,4,95}</p>
+    <p>Result</p>
+    <p id="result1"></p>
+
+    <h4>Task 2</h4>
+    <p>Create a javascript function that accepts an array of strings and return a new array containing the length of
+        each strings inthe input array</p>
+    <h6>Test case</h6>
+    <p>let politics = ["Tinubu", "Obasanjo", "Goodluck", "Obi"]; </p>
+    <p>Result</p>
+    <p id="result2"></p>
+
+    <h4>Task 3</h4>
+    <p>Design a javascript function that takes an array of floating point number and returns the index of the smallest
+        value of the array</p>
+    <h6>Test Case</h6>
+    <p> const testArray7 = [3.14, 2.71, 1.618, 1.0]; <br>Expected result: 3 (index of 1.0) <br>const testArray8 = [10.5,
+        20.2, 5.7, 30.1];<br>Expected result: 2 (index of 5.7)<br>const testArray9 = [-1.5, -2.0, -0.5,
+        -0.2];<br>Expected result: 1 (index of -2.0)</p>
+    <p>Result</p>
+    <p id="result3"></p>
+
+    <h4>Task 4</h4>
+    <p>wrtie a javascript function that accept two array of integers and check if they are equal i.e they have the same
+        elements in the same order</p>
+    <h6>Test Case</h6>
+    <p>const testArray10 = [1, 2, 3, 4, 5];<br>
+        const testArray11 = [1, 2, 3, 4, 5]; // Expected result: true (arrays are equal) <br>
+        const testArray12 = [1, 2, 3, 4, 5];<br>
+        const testArray13 = [1, 2, 3, 4, 6]; // Expected result: false (arrays are not equal)<br>
+        const testArray14 = [];<br>
+        const testArray15 = []; // Edge case: Both empty arrays, Expected result: true (arrays are equal)<br>
+        const testArray16 = [1, 2, 3];<br>
+        const testArray17 = [1, 2, 3, 4]; // Expected result: false (arrays are not equal)</p>
+    <p>Result</p>
+    <p id="result4"></p>
+
+    <!-- <h4>Task 5</h4>
+    <h6>Test Case</h6>
+    <p>const testArray2 = [1, 2, 3, 4, 5]; // Expected result: 15<br> const testArray3 = [10, -5, 7, 2, 1]; // Expected
+        result: 15 <br> const testArray4 = []; // Edge case: Empty array, Expected result: 0</p>
+    <p>Result</p>
+    <p id="result5"></p> -->
+
+
+
+
+
+
+    <script>
+        function getFactorial(num) {
+
+            if (num < 0) {
+                return 0;
+            }
+            if (num == 0 || num == 1) {
+                return 1;
+            }
+            let accumulator = 1;
+            for (let i = num; i >= 1; i--) {
+                accumulator = accumulator * i;
+            }
+            return accumulator;
+
+        }
+        // console.log(getFactorial(5));
+
+        // function add5(num) {
+        //     num = num + 5;
+
+        // }
+        // let num = 5;
+        // add5(num);
+        // console.log(num);
+        let names = ["Micheal", "Grace", "Bolu", "Timothy"];
+
+        function changeName(nameArray) {
+            namesArray[0] = "Presido";
+        }
+        const sum = (firstNum, secondName) =>
+
+            task1
+        let arraydigits = [7, 13, 15, 21, 30, 4, 95];
+        let doubled = bubu(arraydigits)
+        result1.innerHTML = doubled;
+        function bubu(arraydigits) {
+
+            for (let i = 0; i < arraydigits.length; i++) {
+                let newno = arraydigits[i]
+
+                if (newno % 2 == 0) {
+                    newno = newno * 2
+                }
+                arraydigits[i] = newno
+            }
+            return arraydigits;
+        }
+
+        // task2 //
+        let politics = ["Tinubu", "Obasanjo", "Goodluck", "Obi"];
+        let newera = politicians(politics);
+        result2.innerHTML = newera;
+
+        function politicians(Nigeria) {
+            let grandpas = []
+            for (let i = 0; i < politics.length; i++) {
+                grandpas.push(politics[i].length)
+
+            }
+            return grandpas;
+        }
+
+        //  task3 // 
+        let c1 = document.getElementById("c1")
+        const testArray7 = [3.14, 2.71, 1.618, 1.0]; // Expected result: 3 (index of 1.0)
+        const testArray8 = [10.5, 20.2, 5.7, 30.1]; // Expected result: 2 (index of 5.7)
+        const testArray9 = [-1.5, -2.0, -0.5, -0.2]; // Expected result: 1 (index of -2.0)
+
+        let testi = point(testArray7)
+        let newnum = point(testArray8);
+        let test1 = point(testArray9)
+        result3.innerHTML = (`${testi}<br> ${newnum}<br> ${test1}`)
+
+        function point(num) {
+            let firstNum = num[0];
+
+            for (let i = 1; i < num.length; i++) {
+                let numone = num[i]
+
+                if (firstNum > numone) {
+                    firstNum = numone
+
+                }
+            }
+            let numtwo = num.indexOf(firstNum)
+            return numtwo;
+        }
+
+
+
+        //  task4
+        const testArray10 = [1, 2, 3, 4, 5];
+        const testArray11 = [1, 2, 3, 4, 5]; // Expected result: true (arrays are equal)
+        const testArray12 = [1, 2, 3, 4, 5];
+        const testArray13 = [1, 2, 3, 4, 6]; // Expected result: false (arrays are not equal)
+        const testArray14 = [];
+        const testArray15 = []; // Edge case: Both empty arrays, Expected result: true (arrays are equal)
+        const testArray16 = [1, 2, 3];
+        const testArray17 = [1, 2, 3, 4]; // Expected result: false (arrays are not equal)
+        let testA = check(testArray10, testArray11);
+        let testB = check(testArray12, testArray13);
+        let testC = check(testArray14, testArray15);
+        let testD = check(testArray16, testArray17);
+
+        result4.innerHTML = (`${testA} <br> ${testB} <br> ${testC} <br>${testD}`)
+
+
+        function check(test1, test2) {
+            let num1 = test1.length
+            let num2 = test2.length
+
+            if (num1 != num2) {
+                return false;
+            } else {
+                for (let i = 0; i < num1; i++) {
+                    let new1 = test1[i]
+                    let new2 = test2[i]
+                    if (new1 != new2) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
